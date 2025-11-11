@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("./img/bannerHeader.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+header .box-links-header {
+  width: 80%;
+  height: 6vh;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, #4247A2 0%, #52B095 100%);
+  margin-top: 30px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+}
+header .box-links-header nav {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .box-links-header nav a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", Arial;
+  font-size: 1.25rem;
+}
+
+.box-banner-header {
+  width: 80vw;
+  height: 48vh;
+  display: flex;
+  align-items: center;
+}
+.box-banner-header .box-banner-texts {
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.box-banner-header .box-banner-texts h2 {
+  font-size: 2.813rem;
+  font-family: "Inter", Arial;
+  background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.box-banner-header .box-banner-texts p {
+  color: #04031C;
+  width: 70%;
+  font-size: 1.625rem;
+  font-weight: normal;
+  font-family: "Inter", Arial;
+  margin-bottom: 20px;
+}
+
+.container-button-header {
+  display: flex;
+  gap: 20px;
+}
+.container-button-header .btn-header-agendar {
+  background-color: #1173D4;
+  padding: 16px 60px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+}
+.container-button-header .btn-header-saiba-mais {
+  background-color: transparent;
+  padding: 16px 50px;
+  border: 1px solid #1173D4;
+  border-radius: 10px;
+  color: #1173D4;
+  font-size: 1rem;
+}
+
+.first-main-section {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.first-main-section .texts-main-section {
+  width: 60%;
+  padding: 10px;
+}
+.first-main-section .texts-main-section h2 {
+  font-size: 2.813rem;
+  font-family: "Inter", Arial;
+  background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.first-main-section .texts-main-section p {
+  color: #04031C;
+  font-size: 1.5rem;
+  font-family: "Inter", Arial;
+  margin: 40px 0;
+}
+
+.flex-container-cards {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+}
+.flex-container-cards article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  height: 220px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card-1 {
+  padding: 10px;
+  font-family: "Inter", Arial;
+  color: #04031C;
+}
+.card-1 img {
+  width: 50px;
+}
+.card-1 h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.card-1 p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.cards-mulher-section {
+  background-color: #FDEFEF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cards-mulher-section h2 {
+  font-size: 2.813rem;
+  font-family: "Inter", Arial;
+  background: linear-gradient(90deg, rgb(249, 1, 111) 54%, rgb(147, 8, 133) 61%, rgb(208, 56, 170) 75%, rgb(133, 28, 135) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+.cards-mulher-section .container-cards-mulher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  font-family: "Roboto", Arial;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher {
+  flex: 0 1 260px;
+  height: 450px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher img {
+  margin-top: 20px;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher h2 {
+  font-size: 1.25rem;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  align-items: center;
+  width: 90%;
+  margin: 0;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher ul li {
+  text-align: left;
+  width: 100%;
+  margin: 8px;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+.cards-mulher-section .container-cards-mulher .cards-mulher ul li::marker {
+  font-size: 0.7em;
+}
+
+@media (max-width: 1716px) {
+  header {
+    height: 60vh;
+  }
+  header .box-links-header {
+    width: 90vw;
+  }
+  .box-banner-header {
+    width: 90vw;
+  }
+  .box-banner-header .box-banner-texts {
+    height: 50vh;
+  }
+  .box-banner-header .box-banner-texts h2 {
+    width: 40vw;
+  }
+}
+@media (max-width: 1500px) {
+  header {
+    height: 55vh;
+  }
+  header .box-links-header {
+    width: 90vw;
+    margin-top: 30px;
+  }
+  header .box-links-header nav {
+    width: 60%;
+  }
+  header .box-links-header nav a {
+    font-size: 1.25rem;
+  }
+  .box-banner-header .box-banner-texts {
+    height: 40vh;
+  }
+  .box-banner-header .box-banner-texts h2 {
+    font-size: 3rem;
+    width: 40vw;
+  }
+  .box-banner-header .box-banner-texts p {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .first-main-section .texts-main-section {
+    width: 78%;
+  }
+  .first-main-section .texts-main-section h2 {
+    font-size: 3rem;
+  }
+  .first-main-section .texts-main-section p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1100px) {
+  header {
+    height: 50vh;
+  }
+  header .box-links-header nav {
+    width: 70%;
+  }
+  .box-banner-header .box-banner-texts {
+    height: 40vh;
+    width: 70vw;
+    gap: 20px;
+  }
+  .box-banner-header .box-banner-texts h2 {
+    font-size: 2.3rem;
+  }
+  .box-banner-header .box-banner-texts p {
+    font-size: 1.5rem;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .container-button-header .btn-header-saiba-mais {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    border: 2px solid yellow;
+    height: 35vh;
+  }
+  header .box-links-header {
+    height: 12vh;
+    margin-top: 5px;
+  }
+  header .box-links-header img {
+    width: 18%;
+  }
+  header .box-links-header nav {
+    width: 70%;
+  }
+  header .box-links-header nav a {
+    font-size: 0.8rem;
+  }
+  .box-banner-header .box-banner-texts {
+    height: 25vh;
+    width: 80vw;
+    gap: 5px;
+  }
+  .box-banner-header .box-banner-texts h2 {
+    font-size: 1.8rem;
+    width: 70%;
+  }
+  .box-banner-header .box-banner-texts p {
+    font-size: 1rem;
+    width: 50%;
+  }
+  .container-button-header {
+    gap: 15px;
+  }
+  .container-button-header .btn-header-agendar {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  .container-button-header .btn-header-saiba-mais {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 200px) and (max-width: 500px) {
+  header {
+    background-image: none;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  header .box-links-header {
+    width: 90%;
+    height: 8vh;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header .box-links-header img {
+    width: 25%;
+  }
+  header .box-links-header nav {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .box-links-header nav a {
+    width: 90%;
+    font-size: 0.825rem;
+  }
+  header .box-banner-header {
+    height: 60vh;
+    width: 98%;
+    text-align: center;
+  }
+  header .box-banner-header .box-banner-texts {
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 0;
+  }
+  header .box-banner-header .box-banner-texts h2 {
+    width: 75%;
+    font-size: 2.8rem;
+  }
+  header .box-banner-header .box-banner-texts p {
+    width: 80%;
+    font-size: 1.625;
+    margin-bottom: 40px;
+  }
+  .container-button-header {
+    gap: 20px;
+  }
+  .container-button-header .btn-header-agendar {
+    padding: 18px 20px;
+    font-size: 1.1rem;
+  }
+  .container-button-header .btn-header-saiba-mais {
+    padding: 18px 20px;
+    font-size: 1.1rem;
+  }
+  .first-main-section {
+    background-color: #F8F9FA;
+  }
+  .first-main-section .texts-main-section {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+  .first-main-section .texts-main-section h2,
+  .first-main-section .texts-main-section p {
+    margin: 20px auto;
+  }
+  .first-main-section .texts-main-section h2 {
+    font-size: 1.5rem;
+    width: 70%;
+  }
+  .first-main-section .texts-main-section p {
+    font-size: 0.938rem;
+    width: 80%;
+  }
+  .flex-container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  .card-1 {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+  }
+  .card-1 img {
+    width: 50px;
+  }
+  .card-1 h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .card-1 p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

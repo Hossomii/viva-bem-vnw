@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@mixin flex ($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("./img/bannerHeader.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+
+  .box-links-header {
+    width: 80%;
+    height: 6vh;
+    border-radius: 50px;
+    @include flex(center, space-around);
+    background: linear-gradient(to right, #4247A2 0%, #52B095 100%);
+    margin-top: 30px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+
+
+    nav {
+      width: 40%;
+      @include flex(center, space-evenly);
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto', Arial;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.box-banner-header {
+  width: 80vw;
+  height: 48vh;
+  display: flex;
+  align-items: center;
+
+  .box-banner-texts {
+    height: 60vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+
+    h2 {
+      font-size: 2.813rem;
+      font-family: 'Inter', Arial;
+      background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
+      // Pesquisar o que é webkit
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+
+    p {
+      color: #04031C;
+      width: 70%;
+      font-size: 1.625rem;
+      font-weight: normal;
+      font-family: 'Inter', Arial;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.container-button-header {
+  display: flex;
+  gap: 20px;
+
+  .btn-header-agendar {
+    background-color: #1173D4;
+    padding: 16px 60px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .btn-header-saiba-mais {
+    background-color: transparent;
+    padding: 16px 50px;
+    border: 1px solid #1173D4;
+    border-radius: 10px;
+    color: #1173D4;
+    font-size: 1rem;
+  }
+}
+
+.first-main-section {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .texts-main-section {
+    width: 60%;
+    padding: 10px;
+
+    h2 {
+      font-size: 2.813rem;
+      font-family: 'Inter', Arial;
+      background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
+      // Pesquisar o que é webkit
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    p {
+      color: #04031C;
+      font-size: 1.5rem;
+      font-family: 'Inter', Arial;
+      margin: 40px 0;
+    }
+  }
+}
+
+.flex-container-cards {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card-1 {
+  padding: 10px;
+  font-family: 'Inter', Arial;
+  color: #04031C;
+
+  img {
+    width: 50px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+.cards-mulher-section {
+  background-color: #FDEFEF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 2.813rem;
+    font-family: 'Inter', Arial;
+    background: linear-gradient(90deg, rgba(249, 1, 111, 1) 54%, rgba(147, 8, 133, 1) 61%, rgba(208, 56, 170, 1) 75%, rgba(133, 28, 135, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin-top: 2.5rem;
+  }
+
+  .container-cards-mulher {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    font-family: 'Roboto', Arial;
+
+    .cards-mulher {
+      flex: 0 1 260px;
+      height: 450px;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+
+      img {
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        align-items: center;
+        width: 90%;
+        margin: 0;
+
+        li {
+          text-align: left;
+          width: 100%;
+          margin: 8px;
+          font-size: 0.875rem;
+          line-height: 20px;
+        }
+
+        li::marker {
+          font-size: 0.7em; // diminui o tamanho do marcador
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// RESPONSIVIDADE
+//
+
+@media (max-width: 1716px) {
+  header {
+    height: 60vh;
+
+    .box-links-header {
+      width: 90vw;
+    }
+  }
+
+  .box-banner-header {
+    width: 90vw;
+
+    .box-banner-texts {
+      height: 50vh;
+
+      h2 {
+        width: 40vw;
+      }
+    }
+  }
+}
+
+//
+// -- 1500px --
+//
+@media (max-width: 1500px) {
+  header {
+    height: 55vh;
+
+    .box-links-header {
+      width: 90vw;
+      margin-top: 30px;
+
+      nav {
+        width: 60%;
+
+        a {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .box-banner-header {
+    .box-banner-texts {
+      height: 40vh;
+
+
+      h2 {
+        font-size: 3rem;
+        width: 40vw;
+      }
+
+      p {
+        width: 100%;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .first-main-section {
+    .texts-main-section {
+      width: 78%;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//
+// -- 1100px --
+//
+
+@media (max-width: 1100px) {
+  header {
+    height: 50vh;
+
+    .box-links-header {
+      nav {
+        width: 70%;
+      }
+    }
+  }
+
+  .box-banner-header {
+
+    .box-banner-texts {
+      height: 40vh;
+      width: 70vw;
+      gap: 20px;
+
+      h2 {
+        font-size: 2.3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .container-button-header {
+    .btn-header-saiba-mais {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+//
+// -- 700px --
+//
+
+@media (max-width: 700px) {
+  header {
+    border: 2px solid yellow;
+    height: 35vh;
+
+    .box-links-header {
+      height: 12vh;
+      margin-top: 5px;
+
+      img {
+        width: 18%;
+      }
+
+      nav {
+        width: 70%;
+
+
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .box-banner-header {
+
+    .box-banner-texts {
+      height: 25vh;
+      width: 80vw;
+      gap: 5px;
+
+      h2 {
+        font-size: 1.8rem;
+        width: 70%;
+      }
+
+      p {
+        font-size: 1rem;
+        width: 50%;
+      }
+    }
+  }
+
+  .container-button-header {
+    gap: 15px;
+
+    .btn-header-agendar {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+
+    .btn-header-saiba-mais {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+  }
+
+}
+
+//
+// -- MOBILE --
+//
+
+@media (min-width: 200px) and (max-width: 500px) {
+  header {
+    background-image: none;
+    height: auto;
+    padding-bottom: 2rem;
+
+    .box-links-header {
+      width: 90%;
+      height: 8vh;
+      border-radius: 50px;
+      @include flex(center, space-around);
+
+      img {
+        width: 25%;
+      }
+
+      nav {
+        width: 65%;
+        @include flex(center, space-evenly);
+
+        a {
+          width: 90%;
+          font-size: 0.825rem;
+        }
+      }
+    }
+
+    .box-banner-header {
+      height: 60vh;
+      width: 98%;
+      text-align: center;
+
+      .box-banner-texts {
+        height: auto;
+        width: 100%;
+        padding: 2rem 0;
+        align-items: center;
+        gap: 0;
+
+        h2 {
+          width: 75%;
+          font-size: 2.8rem;
+        }
+
+        p {
+          width: 80%;
+          font-size: 1.625;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .container-button-header {
+    gap: 20px;
+
+    .btn-header-agendar {
+      padding: 18px 20px;
+      font-size: 1.1rem;
+    }
+
+    .btn-header-saiba-mais {
+      padding: 18px 20px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .first-main-section {
+    background-color: #F8F9FA;
+
+    .texts-main-section {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+
+      h2,
+      p {
+        margin: 20px auto; // Centraliza horizontalmente
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        width: 70%;
+      }
+
+      p {
+        font-size: 0.938rem;
+        width: 80%;
+      }
+    }
+  }
+
+  .flex-container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .card-1 {
+    width: 80%; // ocupa 80% da tela
+    max-width: 400px; // mas não passa disso
+    padding: 10px;
+
+    img {
+      width: 50px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      width: 90%;
+    }
+  }
+}
