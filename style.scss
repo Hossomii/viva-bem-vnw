@@ -7,6 +7,18 @@
   justify-content: $justify;
 }
 
+@mixin cor-cards-alert ($background, $h3, $p) {
+  background-color: $background;
+
+  h3 {
+    color: $h3;
+  }
+
+  p {
+    color: $p;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +78,7 @@ header {
       font-size: 2.813rem;
       font-family: 'Inter', Arial;
       background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
-      // Pesquisar o que é webkit
+      // Pesquisar o que é Webkit
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -124,7 +136,6 @@ header {
       font-size: 2.813rem;
       font-family: 'Inter', Arial;
       background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
-      // Pesquisar o que é webkit
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -212,6 +223,7 @@ header {
     width: 100%;
     max-width: 1200px;
     font-family: 'Roboto', Arial;
+    margin-bottom: 60px;
 
     .cards-mulher {
       flex: 0 1 260px;
@@ -251,7 +263,7 @@ header {
         }
 
         li::marker {
-          font-size: 0.7em; // diminui o tamanho do marcador
+          font-size: 0.7em; // Diminui o tamanho do marcador
         }
       }
     }
@@ -259,6 +271,161 @@ header {
 }
 
 
+// SEÇÃO PREVENÇÃO MASCULINA
+
+
+.cards-homem-section {
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 2.813rem;
+    font-family: 'Inter', Arial;
+    background: linear-gradient(90deg, rgba(51, 115, 210, 1) 0%, rgba(111, 149, 199, 1) 29%, rgba(123, 181, 245, 1) 48%, rgba(0, 116, 238, 1) 70%, rgba(94, 167, 239, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin-top: 2.5rem;
+  }
+
+  .container-homem-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    font-family: 'Roboto', Arial;
+    margin-bottom: 60px;
+
+    .cards-homem {
+      flex: 0 1 260px;
+      height: 450px;
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+
+      img {
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        align-items: center;
+        width: 90%;
+        margin: 0;
+
+        li {
+          text-align: left;
+          width: 100%;
+          margin: 8px;
+          font-size: 0.875rem;
+          line-height: 20px;
+        }
+
+        li::marker {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+}
+
+.alertas-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+
+  h2 {
+    padding: 30px 0 60px 0;
+    font-size: 2.813rem;
+    font-family: 'Inter', Arial;
+    background: linear-gradient(to right, #1173D4 0%, #33CC73 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+}
+
+.flex-container-cards-alertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px 100px;
+  width: 100%;
+  max-width: 1100px;
+  font-family: 'Roboto', Arial;
+
+  .card-alert1,
+  .card-alert2,
+  .card-alert3,
+  .card-alert4 {
+    height: 150px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .flex-alertas-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.card-alert1 {
+  @include cor-cards-alert(#F9D5E5, #AD346A, #AD346A);
+}
+
+.card-alert2 {
+  @include cor-cards-alert(#D4EDDA, #244A2D, #244A2D);
+}
+
+.card-alert3 {
+  @include cor-cards-alert(#CFE2F3, #2769A3, #2769A3);
+}
+
+.card-alert4 {
+  @include cor-cards-alert(#FFE9C2, #976C00, #976C00);
+}
 
 
 
